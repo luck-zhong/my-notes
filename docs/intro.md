@@ -1,6 +1,7 @@
 ---
 title: 首页
 sidebar_position: 1
+slug: /
 ---
 
 # 我的技术笔记
