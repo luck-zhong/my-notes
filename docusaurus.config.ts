@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: '我的技术笔记',
+  title: '笔记',
   tagline: '记录我的学习与工程实践',
   favicon: 'img/favicon.ico',
 
@@ -39,7 +39,6 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: '我的技术笔记',
       items: [
         {
           type: 'docSidebar',
@@ -58,7 +57,7 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [],
-      copyright: `Copyright © ${new Date().getFullYear()} 我的技术笔记`,
+      copyright: `Copyright © ${new Date().getFullYear()} 笔记`,
     },
 
     prism: {
