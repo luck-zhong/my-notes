@@ -107,9 +107,9 @@ CW Laser → 输入耦合 → Splitter ├── CH1 MZM
 
 理想 1 分 4 会使每路获得总功率的四分之一，相当于约 6.02 dB 的功率分配：
 
-\[
+$$
 10\log_{10}(1/4) \approx -6.02\ \mathrm{dB}
-\]
+$$
 
 实际还要叠加：
 
@@ -164,18 +164,18 @@ Mach–Zehnder Modulator 的简化结构：
 
 理想 MZM 的输出可近似表示为：
 
-\[
+$$
 P_{\text{out}}(t)
 =
 P_{\text{in}}
 \cos^2\left(\frac{\Delta\phi(t)}{2}\right)
-\]
+$$
 
 其中：
 
-- \(P_{\text{in}}\)：输入光功率；
-- \(P_{\text{out}}\)：输出光功率；
-- \(\Delta\phi(t)\)：上、下两臂的相位差。
+- $P_{\text{in}}$：输入光功率；
+- $P_{\text{out}}$：输出光功率；
+- $\Delta\phi(t)$：上、下两臂的相位差。
 
 因此，MZM 的核心不是直接改变光功率，而是：
 
@@ -193,18 +193,18 @@ P_{\text{in}}
 
 光在波导中传播所积累的相位近似为：
 
-\[
+$$
 \phi = \frac{2\pi}{\lambda} n_{\mathrm{eff}} L
-\]
+$$
 
 其中：
 
-- \(\lambda\)：光波长；
-- \(n_{\mathrm{eff}}\)：波导有效折射率；
-- \(L\)：传播长度；
-- \(\phi\)：累积相位。
+- $\lambda$：光波长；
+- $n_{\mathrm{eff}}$：波导有效折射率；
+- $L$：传播长度；
+- $\phi$：累积相位。
 
-因此，只要改变有效折射率 \(n_{\mathrm{eff}}\)，就能改变相位。
+因此，只要改变有效折射率 $n_{\mathrm{eff}}$，就能改变相位。
 
 硅本身没有很强的线性电光效应，高速硅光调制通常利用自由载流子等离子色散效应：
 
@@ -218,7 +218,7 @@ PN/PIN 结中的电子、空穴分布改变
 光相位改变
 ```
 
-两臂相位变化不同，就形成随时间变化的 \(\Delta\phi(t)\)，最终使输出光功率随高速电信号变化。
+两臂相位变化不同，就形成随时间变化的 $\Delta\phi(t)$，最终使输出光功率随高速电信号变化。
 
 ---
 
@@ -314,11 +314,11 @@ VB 通常是高速 PN 结相移器的直流反向偏置。
 
 高速结电压可抽象为：
 
-\[
+$$
 V_{\mathrm{junction}}(t)
 =
 V_B + v_{\mathrm{RF}}(t)
-\]
+$$
 
 具体正负号取决于厂商引脚极性、Driver 连接和电压定义。
 
@@ -381,7 +381,7 @@ VDAC 通常用于控制 Heater 或低速相位调节器。
 
 它改变 MZM 两臂之间的静态相位差：
 
-\[
+$$
 \Delta\phi_{\mathrm{static}}
 =
 \Delta\phi_{\mathrm{process}}
@@ -389,7 +389,7 @@ VDAC 通常用于控制 Heater 或低速相位调节器。
 \Delta\phi_{\mathrm{temperature}}
 +
 \Delta\phi_{\mathrm{VDAC}}
-\]
+$$
 
 VDAC 的主要功能：
 
@@ -428,7 +428,7 @@ CH3 VDAC = 0.81 V
 
 把制造误差、温度、VDAC 和 RF 合并起来，可以写成：
 
-\[
+$$
 \Delta\phi(t)
 =
 \Delta\phi_{\mathrm{process}}
@@ -438,23 +438,23 @@ CH3 VDAC = 0.81 V
 \Delta\phi_{\mathrm{VDAC}}
 +
 \Delta\phi_{\mathrm{RF}}(t)
-\]
+$$
 
 其中：
 
-- \(\Delta\phi_{\mathrm{process}}\)：制造固有差异；
-- \(\Delta\phi_{\mathrm{temperature}}\)：温度引起的漂移；
-- \(\Delta\phi_{\mathrm{VDAC}}\)：低速工作点调整；
-- \(\Delta\phi_{\mathrm{RF}}(t)\)：高速 PAM4 数据相位变化。
+- $\Delta\phi_{\mathrm{process}}$：制造固有差异；
+- $\Delta\phi_{\mathrm{temperature}}$：温度引起的漂移；
+- $\Delta\phi_{\mathrm{VDAC}}$：低速工作点调整；
+- $\Delta\phi_{\mathrm{RF}}(t)$：高速 PAM4 数据相位变化。
 
 最终：
 
-\[
+$$
 P_{\mathrm{out}}(t)
 =
 P_{\mathrm{in}}
 \cos^2\left(\frac{\Delta\phi(t)}{2}\right)
-\]
+$$
 
 可以总结为：
 
@@ -912,7 +912,7 @@ VB 扫描主要不是为了找 Peak/Null，而是评估高速相移器的电气�
 
 - plasma dispersion effect；
 - depletion modulator；
-- \(V_\pi L\)；
+- $V_\pi L$；
 - traveling-wave MZM；
 - 光损耗与效率权衡。
 
