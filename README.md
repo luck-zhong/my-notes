@@ -14,10 +14,12 @@
 
 ```powershell
 node --version
+npm install --global npm@11.13.0
+npm --version
 npm ci
 ```
 
-首次安装需要联网。`npm ci` 按锁文件安装，日常不用升级依赖。
+首次安装需要联网。本地和 GitHub Actions 都使用 npm 11.13.0，避免不同版本对锁文件的解析差异。`npm ci` 按锁文件安装，日常不用升级依赖。
 
 ## 2. 本地预览
 

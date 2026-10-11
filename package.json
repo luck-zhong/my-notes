@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "packageManager": "npm@11.13.0",
   "scripts": {
     "start": "vuepress dev docs --host 127.0.0.1",
     "build": "vuepress build docs",
@@ -15,7 +16,7 @@
   },
   "engines": {
     "node": ">=22.18.0",
-    "npm": ">=10"
+    "npm": ">=11.13.0 <12"
   },
   "overrides": {
     "micromark-extension-math": {
