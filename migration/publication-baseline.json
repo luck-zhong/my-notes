@@ -1,0 +1,134 @@
+{
+  "recordedOn": "2026-10-11",
+  "upstreamCommit": "d5083f910de25aee277932ca1add702980ff68e3",
+  "sourceRenames": {
+    "docs/optical-module/知识扩展/CTLE、DFE、FFE区别.md": "docs/optical-module/DSP/CTLE、DFE、FFE区别.md",
+    "docs/optical-module/知识扩展/光模块 HRx  HTx  LRx  LTx 参数.md": "docs/optical-module/DSP/光模块 HRx  HTx  LRx  LTx 参数.md",
+    "docs/optical-module/知识扩展/400G_DR4_硅光PIC工作原理_VDAC_VB_RF笔记.md": "docs/optical-module/PIC/400G_DR4_硅光PIC工作原理_VDAC_VB_RF笔记.md"
+  },
+  "archivedNotes": [
+    {
+      "source": "docs/optical-module/cmis.md",
+      "snapshot": "migration/archived/cmis.md",
+      "path": "/optical-module/cmis.html",
+      "title": "CMIS 协议",
+      "legacyPath": "/my-notes/optical-module/cmis"
+    }
+  ],
+  "lineEndingConversions": [
+    "docs/optical-module/PIC/400G_DR4_硅光PIC工作原理_VDAC_VB_RF笔记.md"
+  ],
+  "files": [
+    {
+      "source": "docs/embedded/control_algorithm/assets/image-20260303210420937.png",
+      "sha256": "4f90f2f7aaa9706501642dadec388f5955c718f86beffe0eb75b6e407c0e2bb8"
+    },
+    {
+      "source": "docs/embedded/control_algorithm/esc.md",
+      "sha256": "4e357668a07ab31222015dfc3620b171698375e6e1023499deba5916a3959123",
+      "referenceSha256LF": "5f3448324b2d61165dee4a16d88cfed01c7a0c9555003ab9905df5ace71d3d33"
+    },
+    {
+      "source": "docs/embedded/control_algorithm/pid.md",
+      "sha256": "cdcd41c50766e152861d7dd6c4e18229c8424d9e28b47dd0b4877000dd03f0da",
+      "referenceSha256LF": "e4547c8f7a07965e73bd2d20d92192078277432651b8171e3bdff6275b4b83e0"
+    },
+    {
+      "source": "docs/embedded/issue_list/assets/image-20260628182741372.png",
+      "sha256": "002c47d510340c7236c880b8241defee3177b28d1df894a9188a4530a9e18273"
+    },
+    {
+      "source": "docs/embedded/issue_list/PWR_Monitor功能.md",
+      "sha256": "9e6a19e7a497b1a26d00ec7c0bf942f07c853d767833450cb07ee54c1086f9ea",
+      "referenceSha256LF": "4a41fc692810372f99e115765a9bcb926b468a9260594877c3c73ddac3c1bc0e"
+    },
+    {
+      "source": "docs/embedded/issue_list/问题记录模板.md",
+      "sha256": "1e66f9427c1779311a060983d39851ac1dad4a33fe68684592b7e4498b48ab3c",
+      "referenceSha256LF": "506ea35ab9b73e6a2880c235b345190724edf8be52648290507e1411f5bf54c2"
+    },
+    {
+      "source": "docs/optical-module/DSP/.assets/image-20250909152451164.png",
+      "sha256": "2f2f0135bc22a3428c4ddceb601a5570765f0efd1e4af9425d4f52004a230756"
+    },
+    {
+      "source": "docs/optical-module/DSP/CTLE、DFE、FFE区别.md",
+      "sha256": "ec033337a82e7466074659c6c8fa8666bc20a8e411882253e7a541608d2b17bd",
+      "referenceSha256LF": "3d04d6ccec08bcf40a3bf4ff161a777e15035a987d9f08d3a3ea073e9edaae5a"
+    },
+    {
+      "source": "docs/optical-module/DSP/DSP均衡技术.md",
+      "sha256": "2bdd95c6f55b08012f155e8c97ee98efec4fe2e9af0c6ed8bf5b6f50c5be95a4",
+      "referenceSha256LF": "20e3259e4b0c711912e5660438a4372b5498d2eff108e7c561fe6312805fc9fd"
+    },
+    {
+      "source": "docs/optical-module/DSP/DSP链路结构.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "referenceSha256LF": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "docs/optical-module/DSP/光模块 HRx  HTx  LRx  LTx 参数.md",
+      "sha256": "cea27848f7e4bfc07029782bad237cf6d7b6d13bfe9b4f28a2e6cab264588963",
+      "referenceSha256LF": "e758fe960447f376f1dd550625b11aa8e361404c91eaf7c5646907a202203186"
+    },
+    {
+      "source": "docs/optical-module/Optical/.assets/image-20250820095532877-1757399292536.png",
+      "sha256": "9f909deefc702ab203c24bd6f9b5e4e8507401caa6a0e3e0ea682adef205a0da"
+    },
+    {
+      "source": "docs/optical-module/Optical/.assets/image-20250820110328894-1757399304066.png",
+      "sha256": "231bf693797871be555266a0df9e3bba7239f5a2a0638b6ee5cc4a1a7305cf63"
+    },
+    {
+      "source": "docs/optical-module/Optical/.assets/image-20250911150519662.png",
+      "sha256": "2f5cb35ac410d3cdd00d655473c1fdfb444c63a7f318406a894fedca6f699b8c"
+    },
+    {
+      "source": "docs/optical-module/Optical/FEC.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "referenceSha256LF": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "docs/optical-module/Optical/知识拓展.md",
+      "sha256": "f2b6d32085f2ad56a8c0e0e05893a24949f5bd05f92b4747c4faa131f4c1e12f",
+      "referenceSha256LF": "5c69145b1572c532eb4d4e4e45e0b19cff5aad9ca16b4e5c7a997ff12bb7bfa0"
+    },
+    {
+      "source": "docs/optical-module/PIC/400G_DR4_硅光PIC工作原理_VDAC_VB_RF笔记.md",
+      "sha256": "ce93e475b3acf43fde31eb8f4a2ec38d0128f1cff48c797723ee1b0fad174a8d",
+      "referenceSha256LF": "05f765fd33a4d6ac2fbf3c05cbdcc421bb8d3f6b1536bae5332b4426ebbfe186"
+    },
+    {
+      "source": "docs/optical-module/PIC/调制方式.md",
+      "sha256": "82e8f2614eba919ac06fe096ac75fad583afc637b0c73e5ae54fd69b09e146d3",
+      "referenceSha256LF": "6121f4da219c7d61f3c338cb93b4708fff2c03a998a19882a4c2e562b1df604d"
+    },
+    {
+      "source": "docs/optical-module/知识扩展/高速光模块架构_LRO_LPO_NPO_XPO.md",
+      "sha256": "0c5221040074d629ad569a1d4b388a8d99f65a162dccc587f0fe1f3512eec4b9",
+      "referenceSha256LF": "0c5221040074d629ad569a1d4b388a8d99f65a162dccc587f0fe1f3512eec4b9"
+    }
+  ],
+  "missingImages": [
+    {
+      "source": "docs/optical-module/Optical/知识拓展.md",
+      "reference": "../../../../../%25E5%25AD%25A6%25E4%25B9%25A0%25E8%25AE%25B0%25E5%25BD%2595/.assets/image-20250820103224575-1757399297181.png",
+      "display": "保留原文引用；页面提示原图暂未提供，不替换为其他图像。"
+    },
+    {
+      "source": "docs/optical-module/Optical/知识拓展.md",
+      "reference": "../../../../../%25E5%25AD%25A6%25E4%25B9%25A0%25E8%25AE%25B0%25E5%25BD%2595/.assets/8cf62f6acff33274be88327e31b388e7.jpeg",
+      "display": "保留原文引用；页面提示原图暂未提供，不替换为其他图像。"
+    },
+    {
+      "source": "docs/optical-module/Optical/知识拓展.md",
+      "reference": "../../../../../%25E5%25AD%25A6%25E4%25B9%25A0%25E8%25AE%25B0%25E5%25BD%2595/.assets/6fa50221d8522ab81aebd0bf26d2626c.jpeg",
+      "display": "保留原文引用；页面提示原图暂未提供，不替换为其他图像。"
+    },
+    {
+      "source": "docs/optical-module/Optical/知识拓展.md",
+      "reference": "../../../../../%25E5%25AD%25A6%25E4%25B9%25A0%25E8%25AE%25B0%25E5%25BD%2595/.assets/e12153dc21d2e011ace7b905f266efe8.jpeg",
+      "display": "保留原文引用；页面提示原图暂未提供，不替换为其他图像。"
+    }
+  ]
+}

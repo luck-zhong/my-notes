@@ -1,0 +1,873 @@
+{
+  "base": "/my-notes/",
+  "files": [
+    {
+      "source": "docs/embedded/control_algorithm/assets/image-20260303210420937.png",
+      "sha256": "4f90f2f7aaa9706501642dadec388f5955c718f86beffe0eb75b6e407c0e2bb8"
+    },
+    {
+      "source": "docs/embedded/control_algorithm/esc.md",
+      "sha256": "e52251a38644aec800f02ac7ce9f6bb69ba3e6cf271759f479ebc930b87ec5e1",
+      "legacyPath": "/my-notes/embedded/control_algorithm/esc",
+      "anchors": [
+        {
+          "id": "一算法名称",
+          "text": "一、算法名称"
+        },
+        {
+          "id": "二它解决什么问题",
+          "text": "二、它解决什么问题？"
+        },
+        {
+          "id": "适用场景",
+          "text": "适用场景"
+        },
+        {
+          "id": "光模块中的典型应用",
+          "text": "光模块中的典型应用"
+        },
+        {
+          "id": "三核心思想",
+          "text": "三、核心思想"
+        },
+        {
+          "id": "四与-pid-的本质区别",
+          "text": "四、与 PID 的本质区别"
+        },
+        {
+          "id": "五代码结构对应关系",
+          "text": "五、代码结构对应关系"
+        },
+        {
+          "id": "六核心直觉模型山坡模型",
+          "text": "六、核心直觉模型（山坡模型）"
+        },
+        {
+          "id": "七示例代码",
+          "text": "七、示例代码"
+        },
+        {
+          "id": "八为什么在功率域-mw-工作",
+          "text": "八、为什么在功率域 (mW) 工作？"
+        },
+        {
+          "id": "九优点",
+          "text": "九、优点"
+        },
+        {
+          "id": "十缺点",
+          "text": "十、缺点"
+        },
+        {
+          "id": "十一参数调节优先级建议",
+          "text": "十一、参数调节优先级建议"
+        },
+        {
+          "id": "想更稳减少抖动",
+          "text": "想更稳（减少抖动）"
+        },
+        {
+          "id": "想更快收敛",
+          "text": "想更快收敛"
+        },
+        {
+          "id": "十二核心总结",
+          "text": "十二、核心总结"
+        }
+      ]
+    },
+    {
+      "source": "docs/embedded/control_algorithm/pid.md",
+      "sha256": "cdcd41c50766e152861d7dd6c4e18229c8424d9e28b47dd0b4877000dd03f0da",
+      "legacyPath": "/my-notes/embedded/control_algorithm/pid",
+      "anchors": [
+        {
+          "id": "一pid-控制简介",
+          "text": "一、PID 控制简介"
+        },
+        {
+          "id": "二误差定义",
+          "text": "二、误差定义"
+        },
+        {
+          "id": "位置式-pid",
+          "text": "位置式 PID"
+        },
+        {
+          "id": "数学公式",
+          "text": "数学公式"
+        },
+        {
+          "id": "p-项比例",
+          "text": "P 项（比例）"
+        },
+        {
+          "id": "i-项积分",
+          "text": "I 项（积分）"
+        },
+        {
+          "id": "d-项微分",
+          "text": "D 项（微分）"
+        },
+        {
+          "id": "位置式-pid-输出",
+          "text": "位置式 PID 输出"
+        },
+        {
+          "id": "控制流程",
+          "text": "控制流程"
+        },
+        {
+          "id": "代码示例",
+          "text": "代码示例"
+        },
+        {
+          "id": "工程改进",
+          "text": "工程改进"
+        },
+        {
+          "id": "增量式-pid",
+          "text": "增量式 PID"
+        },
+        {
+          "id": "基本思想",
+          "text": "基本思想"
+        },
+        {
+          "id": "数学公式-1",
+          "text": "数学公式"
+        },
+        {
+          "id": "增量式-pid-代码",
+          "text": "增量式 PID 代码"
+        },
+        {
+          "id": "优缺点",
+          "text": "优缺点"
+        },
+        {
+          "id": "位置式-vs-增量式",
+          "text": "位置式 vs 增量式"
+        },
+        {
+          "id": "工程口诀",
+          "text": "工程口诀"
+        }
+      ]
+    },
+    {
+      "source": "docs/embedded/issue_list/assets/image-20260628182741372.png",
+      "sha256": "002c47d510340c7236c880b8241defee3177b28d1df894a9188a4530a9e18273"
+    },
+    {
+      "source": "docs/embedded/issue_list/PWR_Monitor功能.md",
+      "sha256": "9e6a19e7a497b1a26d00ec7c0bf942f07c853d767833450cb07ee54c1086f9ea",
+      "legacyPath": "/my-notes/embedded/issue_list/PWR_Monitor功能",
+      "anchors": []
+    },
+    {
+      "source": "docs/embedded/issue_list/问题记录模板.md",
+      "sha256": "1e66f9427c1779311a060983d39851ac1dad4a33fe68684592b7e4498b48ab3c",
+      "legacyPath": "/my-notes/embedded/issue_list/问题记录模板",
+      "anchors": []
+    },
+    {
+      "source": "docs/optical-module/cmis.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "legacyPath": "/my-notes/optical-module/cmis",
+      "anchors": []
+    },
+    {
+      "source": "docs/optical-module/知识扩展/400G_DR4_硅光PIC工作原理_VDAC_VB_RF笔记.md",
+      "sha256": "05f765fd33a4d6ac2fbf3c05cbdcc421bb8d3f6b1536bae5332b4426ebbfe186",
+      "legacyPath": "/my-notes/optical-module/知识扩展/400G_DR4_硅光PIC工作原理_VDAC_VB_RF笔记",
+      "anchors": [
+        {
+          "id": "1-pic-是什么",
+          "text": "1. PIC 是什么"
+        },
+        {
+          "id": "2-400g-dr4-中-pic-的总体作用",
+          "text": "2. 400G DR4 中 PIC 的总体作用"
+        },
+        {
+          "id": "3-cw-laser-与-pic-的关系",
+          "text": "3. CW Laser 与 PIC 的关系"
+        },
+        {
+          "id": "31-cw-laser-提供光载波",
+          "text": "3.1 CW Laser 提供光载波"
+        },
+        {
+          "id": "32-一束光如何变成四路",
+          "text": "3.2 一束光如何变成四路"
+        },
+        {
+          "id": "4-mzm-的基本结构",
+          "text": "4. MZM 的基本结构"
+        },
+        {
+          "id": "41-相长干涉",
+          "text": "4.1 相长干涉"
+        },
+        {
+          "id": "42-相消干涉",
+          "text": "4.2 相消干涉"
+        },
+        {
+          "id": "43-简化传输关系",
+          "text": "4.3 简化传输关系"
+        },
+        {
+          "id": "5-电压为什么可以改变光相位",
+          "text": "5. 电压为什么可以改变光相位"
+        },
+        {
+          "id": "6-rfvbvdac-的职责划分",
+          "text": "6. RF、VB、VDAC 的职责划分"
+        },
+        {
+          "id": "61-最常见的功能模型",
+          "text": "6.1 最常见的功能模型"
+        },
+        {
+          "id": "62-不要把两个-bias-混在一起",
+          "text": "6.2 不要把两个 Bias 混在一起"
+        },
+        {
+          "id": "7-rf-的作用",
+          "text": "7. RF 的作用"
+        },
+        {
+          "id": "8-vb-的作用",
+          "text": "8. VB 的作用"
+        },
+        {
+          "id": "81-最常见含义",
+          "text": "8.1 最常见含义"
+        },
+        {
+          "id": "82-vb-主要影响",
+          "text": "8.2 VB 主要影响"
+        },
+        {
+          "id": "pn-结工作区",
+          "text": "PN 结工作区"
+        },
+        {
+          "id": "结电容与带宽",
+          "text": "结电容与带宽"
+        },
+        {
+          "id": "相移效率",
+          "text": "相移效率"
+        },
+        {
+          "id": "光损耗",
+          "text": "光损耗"
+        },
+        {
+          "id": "83-vb-通常不作为主要开关光手段",
+          "text": "8.3 VB 通常不作为主要开关光手段"
+        },
+        {
+          "id": "9-vdac-的作用",
+          "text": "9. VDAC 的作用"
+        },
+        {
+          "id": "91-为什么每通道-vdac-不同",
+          "text": "9.1 为什么每通道 VDAC 不同"
+        },
+        {
+          "id": "10-总相位模型",
+          "text": "10. 总相位模型"
+        },
+        {
+          "id": "11-mzm-工作点",
+          "text": "11. MZM 工作点"
+        },
+        {
+          "id": "111-vdac-改变时会发生什么",
+          "text": "11.1 VDAC 改变时会发生什么"
+        },
+        {
+          "id": "12-正常调制与开关光是否冲突",
+          "text": "12. “正常调制”与“开关光”是否冲突"
+        },
+        {
+          "id": "正常发送状态",
+          "text": "正常发送状态"
+        },
+        {
+          "id": "tx-disable--关光状态",
+          "text": "Tx Disable / 关光状态"
+        },
+        {
+          "id": "13-为什么仅把-vdac-拉到-null-仍可能漏光",
+          "text": "13. 为什么仅把 VDAC 拉到 Null 仍可能漏光"
+        },
+        {
+          "id": "14-开光与关光的典型时序",
+          "text": "14. 开光与关光的典型时序"
+        },
+        {
+          "id": "141-开光",
+          "text": "14.1 开光"
+        },
+        {
+          "id": "142-关光",
+          "text": "14.2 关光"
+        },
+        {
+          "id": "15-mpdtap-coupler-与-bias-control",
+          "text": "15. MPD、Tap Coupler 与 Bias Control"
+        },
+        {
+          "id": "16-自动偏置控制的基本思想",
+          "text": "16. 自动偏置控制的基本思想"
+        },
+        {
+          "id": "17-pic-发射通道的推荐抽象模型",
+          "text": "17. PIC 发射通道的推荐抽象模型"
+        },
+        {
+          "id": "18-常见错误认知",
+          "text": "18. 常见错误认知"
+        },
+        {
+          "id": "错误-1mzm-自己产生光",
+          "text": "错误 1：MZM 自己产生光"
+        },
+        {
+          "id": "错误-2rf-直接让光变亮变暗",
+          "text": "错误 2：RF 直接让光变亮、变暗"
+        },
+        {
+          "id": "错误-3vb-就是-mzm-工作点电压",
+          "text": "错误 3：VB 就是 MZM 工作点电压"
+        },
+        {
+          "id": "错误-4vdac-和-rf-必须在同一电极直接相加",
+          "text": "错误 4：VDAC 和 RF 必须在同一电极直接相加"
+        },
+        {
+          "id": "错误-5关闭-rf-就一定无光",
+          "text": "错误 5：关闭 RF 就一定无光"
+        },
+        {
+          "id": "错误-6vdac-拉到-null-就绝对无光",
+          "text": "错误 6：VDAC 拉到 Null 就绝对无光"
+        },
+        {
+          "id": "错误-7平均-tx-power-正常就代表信号正常",
+          "text": "错误 7：平均 Tx Power 正常就代表信号正常"
+        },
+        {
+          "id": "19-调试方法",
+          "text": "19. 调试方法"
+        },
+        {
+          "id": "191-vdac-扫描",
+          "text": "19.1 VDAC 扫描"
+        },
+        {
+          "id": "192-vb-扫描",
+          "text": "19.2 VB 扫描"
+        },
+        {
+          "id": "193-rf-调试",
+          "text": "19.3 RF 调试"
+        },
+        {
+          "id": "194-无光故障树",
+          "text": "19.4 无光故障树"
+        },
+        {
+          "id": "195-有光但-ber-差",
+          "text": "19.5 有光但 BER 差"
+        },
+        {
+          "id": "20-工程最佳实践",
+          "text": "20. 工程最佳实践"
+        },
+        {
+          "id": "1-low-cost-400-gbps-dr4-silicon-photonics-transmitter-for-short-reach-datacenter-application",
+          "text": "1. Low-Cost 400 Gbps DR4 Silicon Photonics Transmitter for Short-Reach Datacenter Application"
+        },
+        {
+          "id": "2-increase-in-modulation-speed-of-silicon-photonics-machzehnder-modulators",
+          "text": "2. Increase in Modulation Speed of Silicon Photonics Mach–Zehnder Modulators"
+        },
+        {
+          "id": "3-silicon-photonic-phase-shifters-and-their-applications",
+          "text": "3. Silicon Photonic Phase Shifters and Their Applications"
+        },
+        {
+          "id": "4-high-performance-mach-zehnder-based-silicon-optical-modulators",
+          "text": "4. High Performance Mach-Zehnder Based Silicon Optical Modulators"
+        },
+        {
+          "id": "5-low-voltage-25-gbps-silicon-machzehnder-modulator-in-the-o-band",
+          "text": "5. Low Voltage 25 Gbps Silicon Mach–Zehnder Modulator in the O-Band"
+        },
+        {
+          "id": "6-silicon-photonic-mach-zehnder-modulator-architectures-for-on-chip-pam-4-signal-generation",
+          "text": "6. Silicon Photonic Mach-Zehnder Modulator Architectures for On-Chip PAM-4 Signal Generation"
+        },
+        {
+          "id": "7-a-100-gbs-pam4-optical-transmitter-in-a-3-d-integrated-silicon-photonics-platform",
+          "text": "7. A 100-Gb/s PAM4 Optical Transmitter in a 3-D-Integrated Silicon Photonics Platform"
+        },
+        {
+          "id": "8-aim-photonics-academy-photonic-integrated-circuits--mach-zehnder-modulator",
+          "text": "8. AIM Photonics Academy: Photonic Integrated Circuits – Mach-Zehnder Modulator"
+        }
+      ]
+    },
+    {
+      "source": "docs/optical-module/知识扩展/CTLE、DFE、FFE区别.md",
+      "sha256": "ec033337a82e7466074659c6c8fa8666bc20a8e411882253e7a541608d2b17bd",
+      "legacyPath": "/my-notes/optical-module/知识扩展/CTLE、DFE、FFE区别",
+      "anchors": [
+        {
+          "id": "1-四个位置的基本定义",
+          "text": "1. 四个位置的基本定义"
+        },
+        {
+          "id": "2-hrx模块接收-host-侧电信号",
+          "text": "2. HRx：模块接收 Host 侧电信号"
+        },
+        {
+          "id": "21-位置",
+          "text": "2.1 位置"
+        },
+        {
+          "id": "22-hrx-重点关注参数",
+          "text": "2.2 HRx 重点关注参数"
+        },
+        {
+          "id": "23-hrx-参数理解",
+          "text": "2.3 HRx 参数理解"
+        },
+        {
+          "id": "24-hrx-常见异常与排查方向",
+          "text": "2.4 HRx 常见异常与排查方向"
+        },
+        {
+          "id": "3-htx模块发电信号给-host",
+          "text": "3. HTx：模块发电信号给 Host"
+        },
+        {
+          "id": "31-位置",
+          "text": "3.1 位置"
+        },
+        {
+          "id": "32-htx-重点关注参数",
+          "text": "3.2 HTx 重点关注参数"
+        },
+        {
+          "id": "33-htx-参数理解",
+          "text": "3.3 HTx 参数理解"
+        },
+        {
+          "id": "34-htx-常见异常与排查方向",
+          "text": "3.4 HTx 常见异常与排查方向"
+        },
+        {
+          "id": "4-ltx模块发光到光纤",
+          "text": "4. LTx：模块发光到光纤"
+        },
+        {
+          "id": "41-位置",
+          "text": "4.1 位置"
+        },
+        {
+          "id": "42-ltx-重点关注参数",
+          "text": "4.2 LTx 重点关注参数"
+        },
+        {
+          "id": "43-ltx-参数理解",
+          "text": "4.3 LTx 参数理解"
+        },
+        {
+          "id": "44-关键参数说明",
+          "text": "4.4 关键参数说明"
+        },
+        {
+          "id": "tx-optical-power",
+          "text": "Tx Optical Power"
+        },
+        {
+          "id": "oma",
+          "text": "OMA"
+        },
+        {
+          "id": "er",
+          "text": "ER"
+        },
+        {
+          "id": "tdecq",
+          "text": "TDECQ"
+        },
+        {
+          "id": "45-ltx-常见异常与排查方向",
+          "text": "4.5 LTx 常见异常与排查方向"
+        },
+        {
+          "id": "5-lrx模块接收光口来的信号",
+          "text": "5. LRx：模块接收光口来的信号"
+        },
+        {
+          "id": "51-位置",
+          "text": "5.1 位置"
+        },
+        {
+          "id": "52-lrx-重点关注参数",
+          "text": "5.2 LRx 重点关注参数"
+        },
+        {
+          "id": "53-lrx-参数理解",
+          "text": "5.3 LRx 参数理解"
+        },
+        {
+          "id": "54-关键参数说明",
+          "text": "5.4 关键参数说明"
+        },
+        {
+          "id": "rx-power--los",
+          "text": "Rx Power / LOS"
+        },
+        {
+          "id": "lrx-cdr-lock",
+          "text": "LRx CDR Lock"
+        },
+        {
+          "id": "snr--pam4-level--ltp",
+          "text": "SNR / PAM4 Level / LTP"
+        },
+        {
+          "id": "fec-corrected--uncorrectable",
+          "text": "FEC Corrected / Uncorrectable"
+        },
+        {
+          "id": "55-lrx-常见异常与排查方向",
+          "text": "5.5 LRx 常见异常与排查方向"
+        },
+        {
+          "id": "6-四个位置对照表",
+          "text": "6. 四个位置对照表"
+        },
+        {
+          "id": "7-工程排查方法",
+          "text": "7. 工程排查方法"
+        },
+        {
+          "id": "71-host-到模块方向异常",
+          "text": "7.1 Host 到模块方向异常"
+        },
+        {
+          "id": "72-模块发光异常",
+          "text": "7.2 模块发光异常"
+        },
+        {
+          "id": "73-模块收光异常",
+          "text": "7.3 模块收光异常"
+        },
+        {
+          "id": "74-模块发给-host-异常",
+          "text": "7.4 模块发给 Host 异常"
+        },
+        {
+          "id": "8-固件工程师建议建立的参数表",
+          "text": "8. 固件工程师建议建立的参数表"
+        },
+        {
+          "id": "9-最短总结",
+          "text": "9. 最短总结"
+        }
+      ]
+    },
+    {
+      "source": "docs/optical-module/知识扩展/光模块 HRx  HTx  LRx  LTx 参数.md",
+      "sha256": "cea27848f7e4bfc07029782bad237cf6d7b6d13bfe9b4f28a2e6cab264588963",
+      "legacyPath": "/my-notes/optical-module/知识扩展/光模块 HRx  HTx  LRx  LTx 参数",
+      "anchors": [
+        {
+          "id": "1-四个位置的基本定义",
+          "text": "1. 四个位置的基本定义"
+        },
+        {
+          "id": "2-hrx模块接收-host-侧电信号",
+          "text": "2. HRx：模块接收 Host 侧电信号"
+        },
+        {
+          "id": "21-位置",
+          "text": "2.1 位置"
+        },
+        {
+          "id": "22-hrx-重点关注参数",
+          "text": "2.2 HRx 重点关注参数"
+        },
+        {
+          "id": "23-hrx-参数理解",
+          "text": "2.3 HRx 参数理解"
+        },
+        {
+          "id": "24-hrx-常见异常与排查方向",
+          "text": "2.4 HRx 常见异常与排查方向"
+        },
+        {
+          "id": "3-htx模块发电信号给-host",
+          "text": "3. HTx：模块发电信号给 Host"
+        },
+        {
+          "id": "31-位置",
+          "text": "3.1 位置"
+        },
+        {
+          "id": "32-htx-重点关注参数",
+          "text": "3.2 HTx 重点关注参数"
+        },
+        {
+          "id": "33-htx-参数理解",
+          "text": "3.3 HTx 参数理解"
+        },
+        {
+          "id": "34-htx-常见异常与排查方向",
+          "text": "3.4 HTx 常见异常与排查方向"
+        },
+        {
+          "id": "4-ltx模块发光到光纤",
+          "text": "4. LTx：模块发光到光纤"
+        },
+        {
+          "id": "41-位置",
+          "text": "4.1 位置"
+        },
+        {
+          "id": "42-ltx-重点关注参数",
+          "text": "4.2 LTx 重点关注参数"
+        },
+        {
+          "id": "43-ltx-参数理解",
+          "text": "4.3 LTx 参数理解"
+        },
+        {
+          "id": "44-关键参数说明",
+          "text": "4.4 关键参数说明"
+        },
+        {
+          "id": "tx-optical-power",
+          "text": "Tx Optical Power"
+        },
+        {
+          "id": "oma",
+          "text": "OMA"
+        },
+        {
+          "id": "er",
+          "text": "ER"
+        },
+        {
+          "id": "tdecq",
+          "text": "TDECQ"
+        },
+        {
+          "id": "45-ltx-常见异常与排查方向",
+          "text": "4.5 LTx 常见异常与排查方向"
+        },
+        {
+          "id": "5-lrx模块接收光口来的信号",
+          "text": "5. LRx：模块接收光口来的信号"
+        },
+        {
+          "id": "51-位置",
+          "text": "5.1 位置"
+        },
+        {
+          "id": "52-lrx-重点关注参数",
+          "text": "5.2 LRx 重点关注参数"
+        },
+        {
+          "id": "53-lrx-参数理解",
+          "text": "5.3 LRx 参数理解"
+        },
+        {
+          "id": "54-关键参数说明",
+          "text": "5.4 关键参数说明"
+        },
+        {
+          "id": "rx-power--los",
+          "text": "Rx Power / LOS"
+        },
+        {
+          "id": "lrx-cdr-lock",
+          "text": "LRx CDR Lock"
+        },
+        {
+          "id": "snr--pam4-level--ltp",
+          "text": "SNR / PAM4 Level / LTP"
+        },
+        {
+          "id": "fec-corrected--uncorrectable",
+          "text": "FEC Corrected / Uncorrectable"
+        },
+        {
+          "id": "55-lrx-常见异常与排查方向",
+          "text": "5.5 LRx 常见异常与排查方向"
+        },
+        {
+          "id": "6-四个位置对照表",
+          "text": "6. 四个位置对照表"
+        },
+        {
+          "id": "7-工程排查方法",
+          "text": "7. 工程排查方法"
+        },
+        {
+          "id": "71-host-到模块方向异常",
+          "text": "7.1 Host 到模块方向异常"
+        },
+        {
+          "id": "72-模块发光异常",
+          "text": "7.2 模块发光异常"
+        },
+        {
+          "id": "73-模块收光异常",
+          "text": "7.3 模块收光异常"
+        },
+        {
+          "id": "74-模块发给-host-异常",
+          "text": "7.4 模块发给 Host 异常"
+        },
+        {
+          "id": "8-固件工程师建议建立的参数表",
+          "text": "8. 固件工程师建议建立的参数表"
+        },
+        {
+          "id": "9-最短总结",
+          "text": "9. 最短总结"
+        }
+      ]
+    },
+    {
+      "source": "docs/optical-module/知识扩展/高速光模块架构_LRO_LPO_NPO_XPO.md",
+      "sha256": "0c5221040074d629ad569a1d4b388a8d99f65a162dccc587f0fe1f3512eec4b9",
+      "legacyPath": "/my-notes/optical-module/知识扩展/高速光模块架构_LRO_LPO_NPO_XPO",
+      "anchors": [
+        {
+          "id": "linear",
+          "text": "Linear"
+        },
+        {
+          "id": "1-总体认知框架",
+          "text": "1. 总体认知框架"
+        },
+        {
+          "id": "2-传统-dsp-光模块",
+          "text": "2. 传统 DSP 光模块"
+        },
+        {
+          "id": "3-lpolinear-pluggable-optics",
+          "text": "3. LPO：Linear Pluggable Optics"
+        },
+        {
+          "id": "31-定义",
+          "text": "3.1 定义"
+        },
+        {
+          "id": "32-传统模块与-lpo-的区别",
+          "text": "3.2 传统模块与 LPO 的区别"
+        },
+        {
+          "id": "33-lpo-的核心变化",
+          "text": "3.3 LPO 的核心变化"
+        },
+        {
+          "id": "34-对固件开发的影响",
+          "text": "3.4 对固件开发的影响"
+        },
+        {
+          "id": "4-lrolinear-receive-optics",
+          "text": "4. LRO：Linear Receive Optics"
+        },
+        {
+          "id": "41-定义",
+          "text": "4.1 定义"
+        },
+        {
+          "id": "42-信号路径",
+          "text": "4.2 信号路径"
+        },
+        {
+          "id": "43-为什么-tx-保留-dsp",
+          "text": "4.3 为什么 TX 保留 DSP"
+        },
+        {
+          "id": "5-nponear-package-optics",
+          "text": "5. NPO：Near-Package Optics"
+        },
+        {
+          "id": "51-定义",
+          "text": "5.1 定义"
+        },
+        {
+          "id": "52-npo-的解决方案",
+          "text": "5.2 NPO 的解决方案"
+        },
+        {
+          "id": "6-npo-与-cpo",
+          "text": "6. NPO 与 CPO"
+        },
+        {
+          "id": "npo",
+          "text": "NPO"
+        },
+        {
+          "id": "cpo",
+          "text": "CPO"
+        },
+        {
+          "id": "7-xpoextra-dense-pluggable-optics",
+          "text": "7. XPO：eXtra-dense Pluggable Optics"
+        },
+        {
+          "id": "71-定义",
+          "text": "7.1 定义"
+        },
+        {
+          "id": "72-xpo-与-lpolro-不冲突",
+          "text": "7.2 XPO 与 LPO/LRO 不冲突"
+        },
+        {
+          "id": "8-不要把-xpo-简单理解成-external-laser",
+          "text": "8. 不要把 XPO 简单理解成 External Laser"
+        },
+        {
+          "id": "9-四种架构放到同一个框架",
+          "text": "9. 四种架构放到同一个框架"
+        },
+        {
+          "id": "10-从光模块固件角度理解",
+          "text": "10. 从光模块固件角度理解"
+        },
+        {
+          "id": "传统-dsp-module",
+          "text": "传统 DSP Module"
+        },
+        {
+          "id": "lro",
+          "text": "LRO"
+        },
+        {
+          "id": "lpo",
+          "text": "LPO"
+        },
+        {
+          "id": "npo--xpo",
+          "text": "NPO / XPO"
+        }
+      ]
+    }
+  ]
+}

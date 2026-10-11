@@ -1,12 +1,24 @@
-// This file is not used by "docusaurus start/build" commands.
-// It is here to improve your IDE experience (type-checking, autocompletion...),
-// and can also run the package.json "typecheck" script manually.
 {
-  "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
-    "baseUrl": ".",
-    "ignoreDeprecations": "6.0",
-    "strict": true
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "types": [
+      "node"
+    ],
+    "noEmit": true
   },
-  "exclude": [".docusaurus", "build"]
+  "include": [
+    "docs/.vuepress/**/*.ts",
+    "docs/.vuepress/**/*.vue"
+  ],
+  "exclude": [
+    "docs/.vuepress/.temp",
+    "docs/.vuepress/.cache",
+    "docs/.vuepress/dist"
+  ]
 }

@@ -1,52 +1,41 @@
 {
   "name": "my-notes",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
-  },
-  "dependencies": {
-    "@docusaurus/core": "3.10.1",
-    "@docusaurus/faster": "3.10.1",
-    "@docusaurus/preset-classic": "3.10.1",
-    "@mdx-js/react": "^3.0.0",
-    "clsx": "^2.0.0",
-    "katex": "^0.17.0",
-    "prism-react-renderer": "^2.3.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "rehype-katex": "^7.0.1",
-    "remark-math": "^6.0.0"
-  },
-  "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.10.1",
-    "@docusaurus/tsconfig": "3.10.1",
-    "@docusaurus/types": "3.10.1",
-    "@types/react": "^19.0.0",
-    "typescript": "~6.0.2"
-  },
-  "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 3 chrome version",
-      "last 3 firefox version",
-      "last 5 safari version"
-    ]
+    "start": "vuepress dev docs --host 127.0.0.1",
+    "build": "vuepress build docs",
+    "serve": "node scripts/serve.mjs",
+    "typecheck": "vue-tsc --noEmit",
+    "verify": "node scripts/verify.mjs",
+    "notes:check": "node scripts/notes.mjs check",
+    "notes:format": "node scripts/notes.mjs format",
+    "notes:test": "node --test scripts/notes.test.mjs"
   },
   "engines": {
-    "node": ">=20.0"
+    "node": ">=22.18.0",
+    "npm": ">=10"
+  },
+  "overrides": {
+    "micromark-extension-math": {
+      "katex": "$katex"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vuepress/bundler-vite": "2.0.0-rc.31",
+    "@vuepress/plugin-slimsearch": "2.0.0-rc.137",
+    "cheerio": "1.2.0",
+    "katex": "0.18.10",
+    "markdownlint": "0.41.1",
+    "prettier": "3.9.10",
+    "sass-embedded": "1.105.0",
+    "typescript": "~6.0.2",
+    "vue": "3.5.43",
+    "vue-tsc": "^3.1.0",
+    "vuepress": "2.0.0-rc.31",
+    "vuepress-theme-hope": "2.0.0-rc.110",
+    "yaml": "2.9.1"
   }
 }
