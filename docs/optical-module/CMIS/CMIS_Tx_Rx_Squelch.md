@@ -6,15 +6,15 @@
 
 **Tx Squelch** 使 Media Side 的光输出进入 *Quiescent（静默）* 状态。CMIS 允许通过降低 **OMA** 或降低 **Pav** 实现。
 
-| 术语 | 含义 | 关注点 |
-|---|---|---|
+| 术语                                    | 含义                                                                 | 关注点           |
+| --------------------------------------- | -------------------------------------------------------------------- | ---------------- |
 | **OMA**（Optical Modulation Amplitude） | 光调制幅度，光功率电平之间的差值；PAM4 常用外层 `OMAouter = P3 − P0` | 光信号变化有多大 |
-| **Pav**（Average Optical Power） | 平均光功率 | 平均有多少光 |
+| **Pav**（Average Optical Power）        | 平均光功率                                                           | 平均有多少光     |
 
 ![正常输出、OMA Squelch 与 Pav Squelch 对比](./assets/squelch_compare.svg)
 
-| 模式 | 主要控制目标 | 典型结果 |
-|---|---|---|
+| 模式            | 主要控制目标   | 典型结果                                 |
+| --------------- | -------------- | ---------------------------------------- |
 | **OMA Squelch** | 降低光调制幅度 | 不再有有效高速光调制，**可能仍有直流光** |
 | **Pav Squelch** | 降低平均光功率 | 输出光功率降低，**不要求必须关闭 Laser** |
 
@@ -24,10 +24,10 @@
 
 **相关寄存器**：
 
-| 位置 | 字段 | 含义 |
-|---|---|---|
-| Lower Memory Byte 26 bit 5 | `SquelchMethodSelect` | `0`=降低 OMA；`1`=降低 Pav，适用于 Host 可选模式 |
-| Page 01h Byte 156 bits 5:4 | `SquelchMethodTx` | `00` 不支持；`01` OMA；`10` Pav；`11` Host 可选择 |
+| 位置                       | 字段                  | 含义                                              |
+| -------------------------- | --------------------- | ------------------------------------------------- |
+| Lower Memory Byte 26 bit 5 | `SquelchMethodSelect` | `0`=降低 OMA；`1`=降低 Pav，适用于 Host 可选模式  |
+| Page 01h Byte 156 bits 5:4 | `SquelchMethodTx`     | `00` 不支持；`01` OMA；`10` Pav；`11` Host 可选择 |
 
 ## 二、Tx Squelch：Forced 与 Automatic（谁来触发）
 
@@ -37,11 +37,11 @@
 
 ![Tx Squelch 联合控制：Host 与 Module](./assets/tx_joint_control.svg)
 
-| 对比 | Forced | Automatic |
-|---|---|---|
-| 触发者 | Host | Module |
-| 可能场景 | Host 要求停止 Tx 输出调制 | Host 输入丢失、信号无法可靠转发 |
-| 解除条件 | Host 撤销强制请求 | 内部判断输入有效，并满足恢复条件 |
+| 对比     | Forced                    | Automatic                        |
+| -------- | ------------------------- | -------------------------------- |
+| 触发者   | Host                      | Module                           |
+| 可能场景 | Host 要求停止 Tx 输出调制 | Host 输入丢失、信号无法可靠转发  |
+| 解除条件 | Host 撤销强制请求         | 内部判断输入有效，并满足恢复条件 |
 
 > **Tx Output Disable 优先于 Tx Squelch**。即使正在 Squelch，只要 Tx Output Disable 有效，输出禁用仍占优。Tx Disable 后的光功率限值由对应媒体接口标准定义，不能把 CMIS 举例的 `-20 dBm` 当作统一强制值。
 
@@ -61,12 +61,12 @@ bool tx_squelch_required(void)
 
 ![Rx 输入与自动静噪路径](./assets/rx_auto_squelch.svg)
 
-| 对比项 | Tx Squelch | Rx Squelch |
-|---|---|---|
-| 作用输出 | Media Side 光输出 | Host Side 电输出 |
-| 触发来源 | Forced + Automatic | **仅模块内部 Automatic** |
-| 关注的输入 | Host 侧输入 | Media 侧输入 |
-| 输出静默方法 | 降低 OMA 或 Pav | 电输出 Quiescent |
+| 对比项       | Tx Squelch         | Rx Squelch               |
+| ------------ | ------------------ | ------------------------ |
+| 作用输出     | Media Side 光输出  | Host Side 电输出         |
+| 触发来源     | Forced + Automatic | **仅模块内部 Automatic** |
+| 关注的输入   | Host 侧输入        | Media 侧输入             |
+| 输出静默方法 | 降低 OMA 或 Pav    | 电输出 Quiescent         |
 
 **关键规定**：CMIS 5.2 **没有 `OutputSquelchForceRx`**。Host 可以**禁用自动 Rx Squelch**（前提是支持该控制），但不能通过标准 Forced Rx Squelch 位直接请求静噪；如果想主动禁用 Rx 电输出，应使用 `OutputDisableRx`。
 
@@ -74,12 +74,12 @@ bool tx_squelch_required(void)
 
 **相关寄存器（按 Host Lane）**：
 
-| 位置 | 字段 | 含义 |
-|---|---|---|
-| Page 10h Byte 139 bit 0–7 | `AutoSquelchDisableRx<N>` | `0`=自动静噪启用；`1`=自动静噪禁用 |
-| Page 10h Byte 138 bit 0–7 | `OutputDisableRx<N>` | `0`=输出启用；`1`=输出禁用 |
-| Page 01h Byte 156 bit 2 | `AutoSquelchDisableRxSupported` | 是否允许 Host 禁用 Rx 自动静噪 |
-| Page 01h Byte 156 bit 1 | `OutputDisableRxSupported` | 是否允许 Host 禁用 Rx 输出 |
+| 位置                      | 字段                            | 含义                               |
+| ------------------------- | ------------------------------- | ---------------------------------- |
+| Page 10h Byte 139 bit 0–7 | `AutoSquelchDisableRx<N>`       | `0`=自动静噪启用；`1`=自动静噪禁用 |
+| Page 10h Byte 138 bit 0–7 | `OutputDisableRx<N>`            | `0`=输出启用；`1`=输出禁用         |
+| Page 01h Byte 156 bit 2   | `AutoSquelchDisableRxSupported` | 是否允许 Host 禁用 Rx 自动静噪     |
+| Page 01h Byte 156 bit 1   | `OutputDisableRxSupported`      | 是否允许 Host 禁用 Rx 输出         |
 
 > **与 Tx 不同**：CMIS 5.2 对 Rx Output Disable 与 Rx Squelch 的静噪方法和结果特性**未定义相互优先级**，不要直接沿用 Tx 的优先级描述。
 
@@ -105,12 +105,12 @@ bool rx_auto_squelch_required(void)
 - **Rx（Media → Host）**：模块内部更了解 Media 输入是否有效、CDR / DSP 是否就绪，因此由它决定何时自动静噪、何时恢复。
 - **Host 如果只想停止 Rx 电输出**：使用 `OutputDisableRx<N>`（前提是该功能被广告为支持），而不是寻找不存在的 Forced Rx Squelch。
 
-| Host 想达到的目的 | CMIS 5.2 控制方式 | 说明 |
-|---|---|---|
-| 主动停止 Rx 电输出 | `OutputDisableRx<N> = 1` | 禁用 Host 侧对应 Rx Lane 输出 |
-| 重新允许 Rx 电输出 | `OutputDisableRx<N> = 0` | 仍受其他输出条件约束 |
-| 输入无效时由模块自动静噪 | `AutoSquelchDisableRx<N> = 0` | 自动静噪启用 |
-| 关闭 Rx 自动静噪功能 | `AutoSquelchDisableRx<N> = 1` | 仅在能力支持时可用；不等于强制静噪 |
+| Host 想达到的目的        | CMIS 5.2 控制方式             | 说明                               |
+| ------------------------ | ----------------------------- | ---------------------------------- |
+| 主动停止 Rx 电输出       | `OutputDisableRx<N> = 1`      | 禁用 Host 侧对应 Rx Lane 输出      |
+| 重新允许 Rx 电输出       | `OutputDisableRx<N> = 0`      | 仍受其他输出条件约束               |
+| 输入无效时由模块自动静噪 | `AutoSquelchDisableRx<N> = 0` | 自动静噪启用                       |
+| 关闭 Rx 自动静噪功能     | `AutoSquelchDisableRx<N> = 1` | 仅在能力支持时可用；不等于强制静噪 |
 
 > **不要混淆 `OutputDisableRx` 和 Forced Rx Squelch。** 两者都可能让 Rx 电输出静默，但前者是实际定义的“输出禁用”控制，后者不是 CMIS 5.2 定义的功能。规范也**没有规定 Rx Output Disable 与 Rx Squelch 在静噪方法和输出特性上的优先级**。
 
@@ -118,12 +118,12 @@ bool rx_auto_squelch_required(void)
 
 ## 五、固件调试速查
 
-| 现象 | 优先检查 |
-|---|---|
-| Tx 有光但没有高速数据 | 是否为 OMA Squelch；DSP 调制是否被静噪 |
-| Tx 平均光功率很低 | 是否为 Pav Squelch 或 Tx Output Disable；确认 MZM / Laser 实际动作 |
-| Host 未强制静噪，Tx 却静默 | 模块 Automatic Squelch、Host 输入有效性、DPSM |
-| Rx 有入光但 Host 无电信号 | Rx Auto Squelch、LOS、CDR/DSP、内部资源 Ready、`OutputDisableRx` |
-| Rx 信号恢复后 Link Flap | 是否过早解除静噪；关联 Lane/内部资源是否全部稳定 |
+| 现象                       | 优先检查                                                           |
+| -------------------------- | ------------------------------------------------------------------ |
+| Tx 有光但没有高速数据      | 是否为 OMA Squelch；DSP 调制是否被静噪                             |
+| Tx 平均光功率很低          | 是否为 Pav Squelch 或 Tx Output Disable；确认 MZM / Laser 实际动作 |
+| Host 未强制静噪，Tx 却静默 | 模块 Automatic Squelch、Host 输入有效性、DPSM                      |
+| Rx 有入光但 Host 无电信号  | Rx Auto Squelch、LOS、CDR/DSP、内部资源 Ready、`OutputDisableRx`   |
+| Rx 信号恢复后 Link Flap    | 是否过早解除静噪；关联 Lane/内部资源是否全部稳定                   |
 
 **速记**：Tx 的 **OMA/Pav** 回答“怎么静噪”，**Forced/Automatic** 回答“谁触发”；Rx 仅有 **Automatic Squelch**，重点是避免把无效/不稳定的接收信号输出给 Host。
