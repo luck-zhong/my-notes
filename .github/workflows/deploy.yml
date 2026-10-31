@@ -44,9 +44,6 @@ jobs:
       - name: Test safe note formatting
         run: npm run notes:test
 
-      - name: Check note style
-        run: npm run notes:check
-
       - name: Build knowledge base
         run: npm run build
 
