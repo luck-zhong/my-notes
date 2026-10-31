@@ -95,7 +95,6 @@ const main = async () => {
       console.log(`已整理：${name}（保留代码与公式）`);
     } else if (normalize(text) !== formatted) {
       console.error(`${name}: 排版不统一，请运行 npm run notes:format -- "${name}"`);
-      if (name === 'docs/optical-module/CMIS/CMIS_Tx_Rx_Squelch.md') console.log('FMT_RESULT_BASE64=' + Buffer.from(formatted, 'utf8').toString('base64'));
       failed = true;
     }
     const results = await lint({ strings: { [name]: mode === 'format' ? formatted : text }, config });
